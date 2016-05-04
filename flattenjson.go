@@ -103,6 +103,9 @@ func flattenMap(jsonMap map[string]interface{}, prefix string, delimiter string,
 
 // JSONByte takes in a  nested JSON as a byte array and a delimiter and returns an
 // flattened json byte array
+// jsonByte = JSON byte array
+// delimeter = character used to separate keys
+// flattenSlice = bool to decide weather to flatten slices within the JSON
 func JSONByte(jsonByte []byte, delimeter string, flattenSlice bool) ([]byte, error) {
 	var input interface{}
 	var m map[string]interface{}
